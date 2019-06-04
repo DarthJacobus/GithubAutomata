@@ -9,17 +9,20 @@ public class BrowserAutomation
 {
 
     public static String repoName;
-    public static String SSH_address;
+    public static String githubUsername;
+    public static String githubEmail;
+    public  static String githubPassword;
     public static Boolean README_included;
 
-    public static String githubUsername = "DarthJacobus";
-    public static String githubEmail = "jacobxwestin@gmail.com";
-    public  static String githubPassword = "Lucatoni77!";
+    public static String SSH_address;
 
 
-    public BrowserAutomation(String repoName, Boolean README_included)
+    public BrowserAutomation(String repoName, String githubUsername, String githubEmail, String githubPassword, Boolean README_included)
     {
         this.repoName = repoName;
+        this.githubUsername = githubUsername;
+        this.githubEmail = githubEmail;
+        this.githubPassword = githubPassword;
         this.README_included = README_included;
 
         SSH_address = "git@github.com:" + githubUsername + "/" + repoName + ".git";
@@ -58,12 +61,6 @@ public class BrowserAutomation
                                                                  "div > div > div.get-repo-modal-options > div.clone-options.https-clone-options > form > button")).click();
 
 
-
-
-
-
-
-
     }
 
 
@@ -75,6 +72,7 @@ public class BrowserAutomation
         d.findElement(By.cssSelector("#password")).sendKeys(githubPassword);
         d.findElement(By.cssSelector("#login > form > div.auth-form-body.mt-3 > input.btn.btn-primary.btn-block")).click();
     }
+
 
     public static void githubCreateNewRepo(WebDriver d) throws InterruptedException
     {
