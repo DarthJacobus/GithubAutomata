@@ -1,5 +1,5 @@
 <h3>Some Selenium dependencies have to be installed in your IDE for the code to run.</h3>
-They are installed here: https://www.seleniumhq.org/download/
+<a href="https://www.seleniumhq.org/download/">Download the dependencies</a>
 <br>
 Installation tutorial: https://www.youtube.com/watch?v=FDIctec94VI
 
